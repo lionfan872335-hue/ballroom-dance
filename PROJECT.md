@@ -23,8 +23,8 @@
 - [x] 國內外推薦教學頻道
 - [x] 嵌入真實 YouTube 影片（教學 + 世界冠軍比賽）
 - [x] 學習資源下載（音樂清單、實用連結、練習表下載）
-- [ ] 部署上線
+- [x] 部署上線（GitHub Pages）
 
 ## 技術
 - HTML / CSS / JavaScript
-- 靜態網頁，可部署於 GitHub Pages 或 Netlify
+- 已部署於 GitHub Pages：https://lionfan872335-hue.github.io/ballroom-dance/
