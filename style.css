@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #e94560;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(233, 69, 96, 0.4);
+}
+
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section.alt {
+    background: #f8f9fa;
+    max-width: none;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.section-desc {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.path-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.path-step {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+}
+
+.step-num {
+    width: 40px;
+    height: 40px;
+    background: #e94560;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 1rem;
+}
+
+.path-step h3 {
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+.path-step ul {
+    list-style: none;
+    text-align: left;
+}
+
+.path-step li {
+    padding: 0.3rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.path-step li::before {
+    content: "✓ ";
+    color: #e94560;
+    font-weight: bold;
+}
+
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.lesson-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+}
+
+.lesson-thumb {
+    height: 150px;
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.lesson-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1.1rem;
+    color: #1a1a2e;
+}
+
+.lesson-card p {
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    min-height: 2.5rem;
+}
+
+.tag {
+    display: inline-block;
+    margin: 0.5rem 1rem 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tag:contains("初級") {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.tag:contains("中級") {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.channel-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.channel-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.channel-card h3 {
+    font-size: 1.2rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.channel-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.channel-link {
+    display: inline-block;
+    color: #e94560;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.channel-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1a1a2e;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link .card {
+    height: 100%;
+}
+
+.dance-page {
+    background: #f8f9fa;
+}
+
+.dance-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-link {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.dance-label {
+    font-size: 0.9rem;
+    color: #666;
+    background: #eee;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+}
+
+.dance-hero {
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.dance-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.dance-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.dance-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.dance-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+.dance-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dance-section {
+    padding: 2.5rem 0;
+}
+
+.dance-section h2 {
+    font-size: 1.6rem;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.dance-section p {
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.dance-section.alt {
+    background: white;
+    margin: 0 -2rem;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.tip-card h3 {
+    font-size: 1.1rem;
+    color: #e94560;
+    margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.step-list {
+    list-style: none;
+}
+
+.step-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.step-list li:last-child {
+    border-bottom: none;
+}
+
+.step-list strong {
+    color: #1a1a2e;
+}
+
+.music-list {
+    list-style: none;
+}
+
+.music-list li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.music-list li::before {
+    content: "🎵 ";
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.video-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-card h3 {
+    font-size: 1rem;
+    padding: 1rem 1rem 0.5rem;
+    color: #1a1a2e;
+}
+
+.video-card p {
+    font-size: 0.85rem;
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.practice-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.practice-table th {
+    background: #1a1a2e;
+    color: white;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.practice-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.practice-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+@media print {
+    .hero, nav, footer, .btn { display: none; }
+    .practice-table { border: 1px solid #333; }
+    .practice-table th { background: #333 !important; -webkit-print-color-adjust: exact; }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section {
+        padding: 3rem 1.5rem;
+    }
+}
